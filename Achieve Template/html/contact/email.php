@@ -1,6 +1,6 @@
 <?php
-$subject = $_REQUEST['subject']; // Subject of your email
-$to = 'spam@ztapps.tk'; //Recipient's E-mail
+$subject = $_REQUEST['Contacting Sal']; // Subject of your email
+$to = 'sa_hle_a1@hotmail.com'; 		 	// Recipient's E-mail
  
 $headers = 'MIME-Version: 1.0' . "\r\n";
 $headers .= "From: " . $_REQUEST['email'] . "\r\n"; // Sender's E-mail
