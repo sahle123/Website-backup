@@ -1,0 +1,23 @@
+Things needed for website
+
+### Major
+
+	- Web hosting
+	- Domain name
+	- Finish contact section
+	- Make about section
+
+### Minor
+
+	- Make github icon in Skills Section light up when hovered over.
+
+
+### Update pages (applies to all footer changes)
+	
+	- Main Index
+	- Contact page
+	- Portfolio page (each project. 4 currently)
+		- Afterlife
+		- Social Circuit
+		- OpenGL Clank
+		- WrinkleWrumble
