@@ -6,7 +6,7 @@ User Page: http://wrapbootstrap.com/user/realmckoy01
 */
 /* GENERAL */
 html {
-  background: #2ba3d4 url("../img/background.svg") 50% 0 no-repeat;
+  background: #2ba3d4 url("../img/Spacebackground-1.svg") 50% 0 no-repeat;
   background-attachment: fixed;
 }
 body {
@@ -50,7 +50,9 @@ section .text-large {
   margin-bottom: 60px;
 }
 .bg-color-1 {
-  background-color: #2ba3d4;
+  /* background-color: rgba(61, 192, 241, 0.3);*/ 
+  /* background-color: #2ba3d4;*/
+  background-color: rgba(0, 0, 0, 0);
 }
 .bg-color-2 {
   background-color: #3dc0f1;
@@ -127,7 +129,7 @@ section .text-large {
 }
 .error {
   border: 1px solid #ff4444;
-  border: 1px solid rgba(255, 68, 68, 0.94);
+  border: 1px solid rgba(255, 68, 68, 0.5);
   -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(233, 102, 102, 0.6);
   -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(233, 102, 102, 0.6);
   -o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(233, 102, 102, 0.6);
@@ -202,7 +204,7 @@ nav {
 /* SERVICES */
 #services {
   background: #3dc0f1;
-  background: rgba(61, 192, 241, 0.75);
+  background: rgba(61, 192, 241, 0.5);
 }
 .service-item i {
   font-size: 120px;
@@ -336,7 +338,7 @@ nav {
 /* ABOUT */
 #about {
   background: #3dc0f1;
-  background: rgba(61, 192, 241, 0.75);
+  background: rgba(61, 192, 241, 0.5);
 }
 #about .team-member {
   background: #fff;
@@ -404,7 +406,8 @@ nav {
 /* CONTACT */
 #contact {
   background: #3dc0f1;
-  background: rgba(61, 192, 241, 0.75);
+  background: rgba(61, 192, 241, 0.5);
+  /* background: rgba(61, 192, 241, 0.75);*/
 }
 #contact .form-container {
   border-bottom: 1px dashed #ddd;
