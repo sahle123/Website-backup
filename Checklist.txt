@@ -1,10 +1,8 @@
 Things needed for website
-LU: 06/14/15
+LU: 06/17/15
 
 ### Major
-
-	- Make separate link for Afterlife game.
-	- Change link in Afterlife portfolio launch button.
+	
 
 ### Minor
 
