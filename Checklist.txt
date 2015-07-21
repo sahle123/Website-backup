@@ -3,6 +3,7 @@ LU: 06/17/15
 
 ### Major
 	
+	- email.php does not work with my domain email. It gets flagged as spam. Need to change headers??
 
 ### Minor
 
