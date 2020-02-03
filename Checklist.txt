@@ -1,19 +1,17 @@
 Things needed for website
 LU: 06/17/15
 
-### Major
-	
+### Major	
 	- email.php does not work with my domain email. It gets flagged as spam. Need to change headers??
 
-### Minor
 
+### Minor
 	- Make github icon in Skills Section light up when hovered over.
 	- Convert PNG and BMP photos to JPG. (Save space and speed up load times)
 
+
 ### Update pages (applies to all footer changes)
-	
 	- Main Index
-	- Contact page
 	- Portfolio page (each project. 4 currently)
 		- Afterlife
 		- Social Circuit
