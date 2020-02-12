@@ -1,6 +1,6 @@
 /* style.css
 * 
-*   LU: 02/11/2020
+*   LU: 02/12/2020
 */
 
 /* 
@@ -292,6 +292,38 @@ div.about-flex {
   padding-right: 12px;
 }
 
+@media only screen and (max-width: 1000px) {
+  div.about-flex.full-screen {
+    display: none;
+  }
+
+  div.about-flex.mobile-screen {
+    display: flex;
+  }
+
+  div.about-flex {
+    flex-direction: column
+  }
+  div.about-flex > div.img-section {
+    width: 100%;
+  }
+  div.about-flex > div.text-section {
+    width: 100%;
+    text-align: left;
+    margin-top: 2rem;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  div.about-flex.full-screen {
+    display: flex;
+  }
+
+  div.about-flex.mobile-screen {
+    display: none;
+  }
+}
+
 
 /*
 *   Footer
@@ -368,76 +400,6 @@ footer > div.nav-footer > ul > li:last-child > a::after {
 }
 footer > div > p {
   letter-spacing: 1em;
-}
-
-
-/*
-*   Project page section
-*/
-div.project-container {
-  padding: 6rem 70px;
-  background-color: #fff;
-  color: #000;
-}
-
-div.project-container > h1 {
-  color: inherit;
-  text-align: center;
-  font-size: 3.7rem;
-}
-
-div.project-container > h2,
-div.project-container > h3,
-div.project-container > h4,
-div.project-container > h5,
-div.project-container > h6 {
-  color: inherit;
-  text-align: center;
-}
-
-div.project-box {
-  align-items: flex-start;
-}
-
-div.project-box > img {
-  flex-shrink: 2;
-  flex-grow: 6;
-}
-
-div.project-box > span {
-  margin-left: 1rem;
-  flex-shrink: 6;
-  flex-grow: 1;
-}
-
-span.project-description {
-  display: block;
-  font-size: 1.2rem;
-  margin-top: 2rem;
-  margin-right: 15rem;
-}
-
-#launch-project {
-  text-align: center;
-  margin-top: 2rem;
-}
-
-#launch-project > a {
-  display: inline-block;
-  text-decoration: none;
-  padding: 14px;
-  background: #2ba3d4;
-  border-radius: 6px;
-}
-#launch-project > a:hover {
-  background: rgb(229, 115, 25);
-  -webkit-transition: background-color 0.15s ease-in-out;
-  -moz-transition: background-color 0.15s ease-in-out;
-  -ms-transition: background-color 0.15s ease-in-out;
-  -o-transition: background-color 0.15s ease-in-out;
-}
-#launch-project > a > h2 {
-  margin: 0;
 }
 
 
