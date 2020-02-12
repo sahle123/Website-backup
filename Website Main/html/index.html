@@ -1,382 +1,235 @@
-  <!DOCTYPE html>
-  <!-- Main Index file-->
-  <html lang="en">
+<!DOCTYPE html>
+<!-- Hi there! Nice of you to stop by. :^)-->
+<!--***-->
+<html lang="en">
 
-      <head>
-          <meta charset="UTF-8" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-          <title>Sahle Alturaigi</title>
-          <meta name="description" content="Sahle Alturaigi's Portfolio" />
-          <meta name="keywords" content="Portfolio, CV, Resume, Career" />
-          <meta name="author" content="Sahle Alturaigi" />
-          <link rel="shortcut icon" href="img/favicon.png">
+    <title>Sahle Alturaigi</title>
+    <meta name="description" content="Sahle Alturaigi's Portfolio" />
+    <meta name="keywords" content="Portfolio, CV, Resume" />
+    <meta name="author" content="Sahle Alturaigi" />
+    <link rel="shortcut icon" href="img/favicon.png">
 
-          <link href='https://fonts.googleapis.com/css?family=Lato:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/reset.css" />
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/fontawesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="fontawesome/css/all.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
 
-          <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
-          <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
-          <link rel="stylesheet" type="text/css" href="css/style.css" />
-          <link rel="stylesheet" type="text/css" href="css/myStyles.css" />
+  <body>
 
-      </head>
+    <!-- Navigation -->
+    <nav class="navbar" role="navigation">
+      <ul>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#about">ABOUT</a></li>
+      </ul>
+    </nav>
 
-      <body>
 
-          <!-- Navigation Section -->
-          <nav class="navbar" role="navigation">
+    <!-- Welcome section -->
+    <section id="home">
+      <div class="welcome-container">
+        <h1>Welcome!</h1>
+        <h2>If you're here to learn more about <b>Sahle "Sal" Alturaigi</b>, then you've come to the right place. This website is dedicated to my side-projects.</h2>
+        <h2>
+          <i class="far fa-lightbulb" aria-hidden="true"></i>
+          <i class="far fa-smile" aria-hidden="true"></i>
+        </h2>
+      </div>
+    </section>
 
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="fa fa-bars"></span>
-                  </button>
-                  <a class="navbar-brand" href="#about">Welcome!</a>
-              </div>
+    <!-- Skills section -->
+    <section id="skills">
+      <div class="skills-container">
+        <h1 class="section-header">Skills</h1>
+        <h3>Here are my specialties</h3>
+        <div class="flex-box-wrap skills-flex">
 
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div class="collapse navbar-collapse" id="navbar">
-                  <ul class="nav navbar-nav">
-                      <li> <a href="#services">SKILLS</a> </li>
-                      <li> <a href="#portfolio">PORTFOLIO</a> </li>
-                      <li> <a href="#about">ABOUT</a> </li>
-                  </ul>
-              </div>
+          <div>
+            <i class="fa fa-code"></i>
+            <h2>Full Stack Web Developer</h2>
+            <h5>Comfortable with C#, Python, JavaScript (and numerous popular frameworks), HTML5, CSS3, Bash, C/C++, SQL, Unity, and more. </h5>
+          </div>
+          <div>
+            <i class="fab fa-windows"></i>
+            <h2>Visual Studio .NET</h2>
+            <h5>Worked several years with .NET framework to build in-house web applications.</h5>
+          </div>
+          <div>
+            <i class="far fa-chart-bar"></i>
+            <h2>Analytics</h2>
+            <h5>Worked on projects using big data with MS Azure, QlikSense, MS Excel (with various addons), SAP Business Objects, and Python (Sklearn, Numpy, Pandas, etc...)</h5>
+          </div>
+          <div>
+            <i class="fa fa-lock"></i>
+            <h2>Security</h2>
+            <h5>Has experience in pentesting, code analysis, building custom payloads, and hardening applications.</h5>
+          </div>
 
-          </nav>
-          <!-- End Navigation Section -->
+        </div>
+      </div>
+    </section>
 
-          <!-- Home Section -->
-          <section id="home">
-              <div class="container">
-                  <div class="row text-center">
-                      <div class="col-sm-12">
-                          <div class="visible-xs">
-                              <img src="img/logo-no-text.png" class="logo" alt="Home" width="192" height="192">
-                          </div>
-                      </div>
-                      <div class="col-sm-12">
-                          <p class="text-extra-large">
-                            Welcome!
-                          </p>
-                          <div class="row">
-                            <div class="col-sm-offset-3 col-sm-6">
-                              <p class="text-extra-large">
-                                If you're here to learn more about <b>Sahle "Sal" Alturaigi</b>, then you've come to the right place. This website is dedicated to my side-projects.
-                              </p>
-                            </div>
-                         </div>
-                          <p class="text-extra-large">
-                            <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-                            <i class="fa fa-smile-o" aria-hidden="true"></i>
-                          </p>
-                          <p class="text-extra-large">
+    <!-- Portfolio -->
+    <section id="portfolio">
+      <div class="portfolio-container">
+        <h1 class="section-header">Portfolio</h1>
+        <h3>Here is a list of notable projects I completed</h3>
+        <div class="flex-box-wrap portfolio-flex">
 
-                          </p>
-                      </div>
-                  </div>
-              </div>
-          </section>
-
-          <!-- Skills section -->
-          <section id="services">
-
-              <div class="container">
-
-                  <div class="row text-center">
-                      <div class="col-sm-12">
-                          <h1 class="heading-large section-color-1">SKILLS</h1>
-                      </div>
-                      <div class="col-sm-12">
-                          <p class="text-large section-color-1">
-                              Here are my many specialties<br>
-                          </p>
-                      </div>
-                  </div>
-
-                  <div class="row text-center">
-
-                      <div class="col-sm-6 col-lg-3 service-item">
-                          <div>
-                              <a target="_blank" class="github">
-                                  <i class="fa fa-windows"></i>
-                              </a>
-                          </div>
-                          <div>
-                              <h3 class="section-color-1">Visual Studio .NET</h3>
-                              <p class="section-color-1">
-                                  Worked several years in Visual Studio ASP.NET with MVC for building enterprise web-applications.
-                              </p>
-                          </div>
-                      </div>
-
-                      <div class="col-sm-6 col-lg-3 service-item">
-                          <div>
-                              <a target="_blank" class="github">
-                                  <i class="fa fa-code"></i>
-                              </a>
-                          </div>
-                          <div>
-                              <h3 class="section-color-1">Code</h3>
-                              <p class="section-color-1">
-                                  Built applications across an array of technologies. Comfortable with C/C++, C#, PHP, Python, HTML, CSS, JavaScript (various libraries), and Bash.
-                              </p>
-                          </div>
-                      </div>
-
-                      <div class="col-sm-6 col-lg-3 service-item">
-                          <div>
-                              <a target="_blank" class="unity">
-                                  <i class="fa fa-gamepad"></i>
-                              </a>
-                          </div>
-                          <div>
-                              <h3 class="section-color-1">Unity</h3>
-                              <p class="section-color-1">
-                                  Decent in working with the Unity 3D game engine for making various interactable programs and short games.
-                              </p>
-                          </div>
-                      </div>
-
-                      <div class="col-sm-6 col-lg-3 service-item">
-                          <div>
-                              <a target="_blank" class="Cybersec">
-                                  <i class="fa fa-lock"></i>
-                              </a>
-                          </div>
-                          <div>
-                              <h3 class="section-color-1">Cyber Security</h3>
-                              <p class="section-color-1">
-                                  Has experience in pen-testing, code analysis, building custom payloads, and hardening applications.
-                              </p>
-                          </div>
-                      </div>
-
-                  </div>
-
-              </div>
-          </section>
-
-          <!-- Portfolio Section -->
-          <section id="portfolio">
-
-              <div class="container">
-
-                  <div class="row text-center">
-                      <div class="col-sm-12">
-                          <h1 class="heading-large section-color-2">PORTFOLIO</h1>
-                      </div>
-                      <div class="col-sm-12">
-                          <p class="text-large section-color-2">
-                              Here is a list of notable projects I have completed
-                          </p>
-                      </div>
-                  </div>
-
-                  <!-- Gallery Section -->
-                  <ul id="gallery">
-
-                      <li class="code design grid-unit">
-                          <a href="portfolio/Afterlife-project/index.html" class="thumbnail">
-                              <img src="portfolio/portfolioPictures/Afterlife/Dev6-3.jpg" alt=""></img>
-                              <div class="mask">
-                                  <div class="meta">
-                                      <div class="words">
-                                          <span class="title">Afterlife Game</span>
-                                          <span class="role">Unity / Game</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-
-                      <li class="web code grid-unit">
-                          <a href="portfolio/WrinkleWrumble-project/index.html" class="thumbnail">
-                              <img src="portfolio/portfolioPictures/Wrinkle Wrumble/Dev 2-2.jpg" alt=""></img>
-                              <div class="mask">
-                                  <div class="meta">
-                                      <div class="words">
-                                          <span class="title">Wrinkle Wrumble</span>
-                                          <span class="role">Unity / Game / Net</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-
-                      <li class="app code grid-unit">
-                          <a href="portfolio/OpenGL-project/index.html" class="thumbnail">
-                              <img src="portfolio/portfolioPictures/OpenGL Clank/Clank body3.jpg" alt=""></img>
-                              <div class="mask">
-                                  <div class="meta">
-                                      <div class="words">
-                                          <span class="title">OpenGL Clank</span>
-                                          <span class="role">Code / OpenGL / Blender</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-
-                      <li class="web app code grid-unit">
-                          <a href="portfolio/SocialCircuit-project/index.html" class="thumbnail">
-                              <img src="portfolio/portfolioPictures/User Center Design/Showcase-Photo2.jpg" alt=""></img>
-                              <div class="mask">
-                                  <div class="meta">
-                                      <div class="words">
-                                          <span class="title">Social Circuit</span>
-                                          <span class="role">Design / App / Prototyping</span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-
-                      <li class="app design grid-unit">
-                          <a class="thumbnail">
-                              <img src="media/img/project-image-small-2.jpg" alt="">
-                              <div class="mask">
-                                  <div class="meta">
-                                      <div class="words">
-                                          <span class="title">Coming Soon...</span>
-                                          <span class="role"></span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-
-                      <li class="app design grid-unit">
-                          <a class="thumbnail">
-                              <img src="media/img/project-image-small-2.jpg" alt="">
-                              <div class="mask">
-                                  <div class="meta">
-                                      <div class="words">
-                                          <span class="title">Coming Soon...</span>
-                                          <span class="role"></span>
-                                      </div>
-                                  </div>
-                              </div>
-                          </a>
-                      </li>
-                  </ul>
-              </div>
-          </section>
-
-            <!-- About Section -->
-            <section id="about">
-                <div class="container">
-                    <div class="row text-center">
-                        <div class="col-sm-12">
-                            <h1 class="heading-large section-color-1">ABOUT ME</h1>
-                            <br />
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-sm-8">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <h2 class="S-style">Who am I?</h2>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <p class="text-large section-color-1">That's me on the far right-side sitting on a chair. I'm a Jack-of-all-trades kind of developer, but most of my talents lie in web-dev. Right now I live and work in Dubai.</p>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <h2 class="S-style">Fun Facts</h2>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <ul class="text-large section-color-1" style="overflow: auto; padding-left: 1em;">
-                                        <li>I've spent a great deal of my life in both the U.S. and Saudi Arabia.</li>
-                                        <li>I like doing Parkour on my free time.</li>
-                                        <li>Among friends who play instruments, I like busting out my harmonica.</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-sm-4">
-							<img id="me" src="media/aboutMePictures/spartan-race-2020.jpg" class="outset" alt="Failed to load :("></img>
-                        </div>
-                    </div>
-
-                    <div id="CV" style="display: block; left: 50%">
-                        <a href="Sahle Alturaigi CV.pdf" class="btn btn-cv" target="_blank">
-                            <i class="fa fa-file-text" aria-hidden="true" style="font-size:50px; padding-right:10px"></i>
-                            <h2 class="section-color-1" style="display: inline-block; padding-top:21px;">Download my CV here!</h2>
-                        </a>
-                    </div>
+          <div>
+            <a href="portfolio/Afterlife-project/index.html">
+              <img src="portfolio/portfolioPictures/Afterlife/Dev6-3.jpg" alt="">
+              <div class="mask">
+                <div>
+                  <span>Afterlife Game</span>
+                  <span>Unity / Game</span>
                 </div>
-            </section>
-
-          <!-- Footer Section -->
-          <footer>
-              <div class="container text-center">
-
-                  <div class="row">
-
-                      <div class="col-sm-12">
-                          <ul class="social list-inline">
-                              <li>
-                                  <div>
-                                      <a href="https://github.com/sahle123" target="_blank" class="github">
-                                          <i class="fa fa-github"></i>
-                                      </a>
-                                  </div>
-                              </li>
-                              <li>
-                                  <div>
-                                      <a href="https://www.facebook.com/sal.alturaigi" class="facebook" target="_blank">
-                                          <i class="fa fa-facebook"></i>
-                                      </a>
-                                  </div>
-                              </li>
-                              <li>
-                                  <div>
-                                        <a href="https://stackoverflow.com/users/6369752/sal-alturaigi" class="stackoverflow" target="_blank">
-                                            <i class="fa fa-stack-overflow"></i>
-                                        </a>
-                                  </div>
-                                </li>
-                                <li>
-                                  <div>
-                                        <a href="https://www.linkedin.com/in/sahlealturaigi/" class="linkedin" target="_blank">
-                                            <i class="fa fa-linkedin"></i>
-                                        </a>
-                                  </div>
-                                </li>
-                          </ul>
-                      </div>
-
-                      <div class="col-sm-12">
-                          <ul class="subnav list-inline">
-                              <li><a href="#services">Skills</a></li>
-                              <li><a href="#portfolio">Portfolio</a></li>
-                              <li><a href="#about">About</a></li>
-                          </ul>
-                      </div>
-
-                      <div class="col-sm-12">
-                          <p>Last Updated: February, 2020</p>
-                      </div>
-                  </div>
-
               </div>
-          </footer>
+            </a>
+          </div>
+          
+          <div>
+            <a href="portfolio/WrinkleWrumble-project/index.html">
+              <img src="portfolio/portfolioPictures/Wrinkle Wrumble/Dev 2-2.jpg" alt="">
+              <div class="mask">
+                <div>
+                  <span>Wrinkle Wrumble</span>
+                  <span>Unity / Game dev / Networking</span>
+                </div>
+              </div>
+            </a>
+          </div>
 
+          <div>
+            <a href="portfolio/OpenGL-project/index.html">
+              <img src="portfolio/portfolioPictures/OpenGL Clank/Clank body4.jpg" alt="">
+              <div class="mask">
+                <div>
+                  <span>Clank</span>
+                  <span>OpenGL / Blender / Glut</span>
+                </div>
+              </div>
+            </a>
+          </div>
 
-          <script src="js/jquery.1.10.1.js"></script>
-          <script src="js/bootstrap.min.js"></script>
-          <script src="js/smoothscroll.js"></script>
+          <div>
+            <a href="portfolio/SocialCircuit-project/index.html">
+              <img src="portfolio/portfolioPictures/User Center Design/Showcase-Photo2.jpg" alt="">
+              <div class="mask">
+                <div>
+                  <span>Social Circuit</span>
+                  <span>Design / App Concept / Prototyping</span>
+                </div>
+              </div>
+            </a>
+          </div>
 
-      </body>
+          <div>
+            <a>
+              <img src="media/img/project-image-small-2.jpg" alt="">
+              <div class="mask">
+                <div>
+                  <span>Coming Soon...</span>
+                  <span></span>
+                </div>
+              </div>
+            </a>
+          </div>
 
-  </html>
+          <div>
+            <a>
+              <img src="media/img/project-image-small-2.jpg" alt="">
+              <div class="mask">
+                <div>
+                  <span>Coming Soon...</span>
+                  <span></span>
+                </div>
+              </div>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- About me -->
+    <section id="about">
+      <div class="about-container">
+        <h1 class="section-header">About Me</h1>
+        <div class="flex-box-no-wrap about-flex">
+          <div class="text-section">
+            <h1>Who am I?</h1>
+            <h3>That's me on the far right-side sitting on a chair. I'm a jack-of-all-trades kind of developer, but most of my talents lie in web development. Right now I live and work in Dubai.</h3>
+            <h1>Fun Facts:</h1>
+            <h3>
+              <ul>
+                <li>Among friends who play music, I like busting out my harmonica.</li>
+                <li>I do a lot of parkour on my free time</li>
+                <li>Most of my life I lived in both the U.S. and Saudi Arabia.</li>
+                <li>I genuinely appreciate you taking the time to check out my website. <i class="far fa-smile"></i></li>
+              </ul>
+            </h3>
+          </div>
+          <div class="img-section">
+            <img src="media/aboutMePictures/spartan-race-2020.jpg" alt="Image failed to load">
+          </div>
+        </div>
+        <div id="CV">
+          <a href="media/Sahle Alturaigi CV.pdf" class="btn-cv" target="_blank">
+            <h1>
+              <i class="fas fa-file-alt"></i>Download my CV here!
+            </h1>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="icons">
+        <ul>
+          <li>
+            <a href="https://github.com/sahle123" target="_blank">
+              <i class="fab fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/sal.alturaigi" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://stackoverflow.com/users/6369752/sal-alturaigi" target="_blank">
+              <i class="fab fa-stack-overflow"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/sahlealturaigi/" target="_blank">
+              <i class="fab fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="nav-footer">
+        <ul>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <p>Last updated February 2020</p>
+      </div>
+    </footer>
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/smoothscroll.js"></script>
+  </body>
+</html>
