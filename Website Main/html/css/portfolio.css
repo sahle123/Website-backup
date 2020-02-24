@@ -1,6 +1,6 @@
 /* portfolio.css
 * 
-*   LU: 02/12/2020
+*   LU: 02/24/2020
 */
 
 /*
@@ -72,6 +72,14 @@ span.project-description {
   margin: 0;
 }
 
+/* Mobile screens */
+@media only screen and (max-width: 415px) {
+  div.project-container {
+    padding: 5rem 12.5%;
+  }
+}
+
+/* Smaller screens */
 @media only screen and (max-width: 768px) {
 	.project-box > span {
 		display: none;

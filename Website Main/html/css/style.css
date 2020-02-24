@@ -1,6 +1,6 @@
 /* style.css
 * 
-*   LU: 02/12/2020
+*   LU: 02/24/2020
 */
 
 /* 
@@ -292,38 +292,6 @@ div.about-flex {
   padding-right: 12px;
 }
 
-@media only screen and (max-width: 1000px) {
-  div.about-flex.full-screen {
-    display: none;
-  }
-
-  div.about-flex.mobile-screen {
-    display: flex;
-  }
-
-  div.about-flex {
-    flex-direction: column
-  }
-  div.about-flex > div.img-section {
-    width: 100%;
-  }
-  div.about-flex > div.text-section {
-    width: 100%;
-    text-align: left;
-    margin-top: 2rem;
-  }
-}
-
-@media only screen and (min-width: 1001px) {
-  div.about-flex.full-screen {
-    display: flex;
-  }
-
-  div.about-flex.mobile-screen {
-    display: none;
-  }
-}
-
 
 /*
 *   Footer
@@ -400,6 +368,74 @@ footer > div.nav-footer > ul > li:last-child > a::after {
 }
 footer > div > p {
   letter-spacing: 1em;
+}
+
+
+/*
+*   Viewports
+*/
+/* Mobile phone screens */
+@media only screen and (max-width: 415px) {
+  h1.section-header {
+    font-size: 3.2rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  div.welcome-container {
+    padding: 5rem 12.5%;
+  }
+
+  div.portfolio-container {
+    padding: 5rem 12.5%;
+  }
+
+  div.about-container {
+    padding: 5rem 12.5%;
+  }
+
+  .about-flex > div.text-section > h3 {
+    padding-right: 0;
+  }
+
+  footer > div.icons > ul > li {
+    margin: 0 0.5rem;
+  }
+
+}
+
+/* Smaller screens */
+@media only screen and (max-width: 1000px) {
+  div.about-flex.full-screen {
+    display: none;
+  }
+
+  div.about-flex.mobile-screen {
+    display: flex;
+  }
+
+  div.about-flex {
+    flex-direction: column
+  }
+  div.about-flex > div.img-section {
+    width: 100%;
+  }
+  div.about-flex > div.text-section {
+    width: 100%;
+    text-align: left;
+    margin-top: 2rem;
+  }
+}
+
+/* Desktop screens */
+@media only screen and (min-width: 1001px) {
+  div.about-flex.full-screen {
+    display: flex;
+  }
+
+  div.about-flex.mobile-screen {
+    display: none;
+  }
 }
 
 
