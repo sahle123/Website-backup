@@ -53,4 +53,8 @@ sahle-alturaigi.com
 	- Updated "About me" section.
 	- Reorganized folder hierarchy.
 	- Converted all photos to JPEG.
-	- 
+
+02/27/2020:
+	- Refactor markup and stylesheets. No longer using Bootstrap. Only pure CSS3 and FontAwesome.
+	- Updated stylesheets to work for small mobile phone devices.
+	- Added HTTPS functionality to website. Let's Encrypt CA.
