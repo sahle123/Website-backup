@@ -1,13 +1,13 @@
 /* portfolio.css
 * 
-*   LU: 02/24/2020
+*   LU: 2022/10/27
 */
 
 /*
 *   Project page section
 */
 div.project-container {
-  padding: 6rem 70px;
+  padding: 6rem 6rem;
   background-color: #fff;
   color: #000;
 }
@@ -29,6 +29,8 @@ div.project-container > h6 {
 
 div.project-box {
   align-items: flex-start;
+  max-width: 90rem;
+  margin: auto;
 }
 
 div.project-box > img {
@@ -42,11 +44,18 @@ div.project-box > span {
   flex-grow: 1;
 }
 
-span.project-description {
+.project-description {
   display: block;
   font-size: 1.2rem;
-  margin-top: 2rem;
-  margin-right: 15rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+.project-side-description {
+  display: block;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+  border-left: 1px solid #ccc
 }
 
 #launch-project {
@@ -81,11 +90,14 @@ span.project-description {
 
 /* Smaller screens */
 @media only screen and (max-width: 768px) {
-	.project-box > span {
+	.project-side-description {
 		display: none;
 	}
+}
 
-	span.project-description {
-		margin-right: 0;
-	}
+/* Bigger screens */
+@media only screen and (min-width: 1600px) {
+  div.project-container {
+    padding: 6rem 10rem;
+  }
 }

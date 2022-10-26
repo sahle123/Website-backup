@@ -1,19 +1,20 @@
 /*  style.css
-*   LU: 02/24/2020
+*   LU: 2022/10/27
 */
 
 /* 
 *   General
 */
 html {
-  background: #2ba3d4 url("../media/wallpapers/Dark blue gradient.svg") 50% 0 no-repeat;
+  background: #2ba3d4 url("../media/wallpapers/Dark blue gradient.svg");
+  background-size: cover;
   background-attachment: fixed;
   font-family: "lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 body {
   background: none;
-  font-size: 14px;
+  font-size: 1rem;
 }
 b {
   font-weight: bold;
@@ -65,11 +66,27 @@ img {
   justify-content: space-around;
   margin-top: 5rem;
 }
+.flex-box-wrap-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5rem; 
+}
 .flex-box-no-wrap {
   display: flex;
   flex-wrap: nowrap;
   align-content: center;
   align-items: center;
+  justify-content: space-around;
+  margin-top: 5rem;
+}
+.flex-box-no-wrap-stretch {
+  display: flex;
+  flex-wrap: nowrap;
+  align-content: center;
+  align-items: top;
   justify-content: space-around;
   margin-top: 5rem;
 }
@@ -93,6 +110,7 @@ nav.navbar {
 }
 nav.navbar > ul {
   text-align: center;
+  font-size: 1.2rem;
 }
 nav.navbar > ul > li {
   display: inline-block;
@@ -434,6 +452,11 @@ footer > div > p {
 
   div.about-flex.mobile-screen {
     display: none;
+  }
+}
+@media only screen and (min-width:  2000px) {
+  html {
+    font-size: 22px;
   }
 }
 
