@@ -1,2 +1,84 @@
 # Website-backup
 Backup repo for my website
+
+
+#############
+# Changelog #
+#############
+
+sahle-alturaigi.com
+
+//----------------------------------------------------------------------------
+2016
+
+01/06/16:
+	- Typo in sahle-alturaigi.com/portfolio/WrinkleWrumble-project/index.html
+	in "technologies used" section. Changed 'Maximo' --> 'Mixamo'
+
+
+02/22/16:
+	- Reworded "Social Circuit" portfolio page summary to be more professional and clear.
+
+	- Updated CV
+
+08/10/16:
+	- Updated CV
+	- Removed "Contact" page since all I got was spam...
+	- Header isn't aligned properly. 'Will fix later.
+
+08/30/16:
+	- Removed Home icon from all pages
+
+//----------------------------------------------------------------------------
+2017
+
+10/26/17:
+	- Updated all text on all pages.
+	- Changed background
+	- Rearranged 'About' section
+	- Removed 'Github' from skills and replaced it with 'Visual Studi .NET'.
+
+//----------------------------------------------------------------------------
+2018
+
+12/08/18:
+	- Updated CV
+
+//----------------------------------------------------------------------------
+2019
+
+09/29/19:
+	- Removed Adwa's website from list of projects
+
+//----------------------------------------------------------------------------
+2020
+
+02/03/2020:
+	- Updated "About me" section.
+	- Reorganized folder hierarchy.
+	- Converted all photos to JPEG.
+
+02/27/2020:
+	- Refactor markup and stylesheets. No longer using Bootstrap. Only pure CSS3 and FontAwesome.
+	- Updated stylesheets to work for small mobile phone devices.
+	- Added HTTPS functionality to website. Let's Encrypt CA.
+
+
+//----------------------------------------------------------------------------
+2022
+	
+2022-10-25:
+	- Updated page styles
+	- Add PharmaSee project
+	- Partially added NKeeper project
+
+
+//----------------------------------------------------------------------------
+2023
+
+2023-04-29:
+	- Updated CV
+	- Removed Facebook link
+
+2023-08-01
+	- Migrating to AWS
