@@ -68,3 +68,13 @@ sahle-alturaigi.com
 	- Add PharmaSee project
 	- Partially added NKeeper project
 
+
+//----------------------------------------------------------------------------
+2023
+
+2023-04-29:
+	- Updated CV
+	- Removed Facebook link
+
+2023-08-01
+	- Migrating to AWS
