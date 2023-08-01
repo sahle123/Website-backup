@@ -2,83 +2,72 @@
 Backup repo for my website
 
 
-#############
-# Changelog #
-#############
+## Change Log
 
 sahle-alturaigi.com
 
-//----------------------------------------------------------------------------
-2016
+### 2016
 
-01/06/16:
-	- Typo in sahle-alturaigi.com/portfolio/WrinkleWrumble-project/index.html
-	in "technologies used" section. Changed 'Maximo' --> 'Mixamo'
+Jan/06
+- Typo in sahle-alturaigi.com/portfolio/WrinkleWrumble-project/index.html
+in "technologies used" section. Changed 'Maximo' --> 'Mixamo'
 
+Feb/22
+- Reworded "Social Circuit" portfolio page summary to be more professional and clear.
+- Updated CV
 
-02/22/16:
-	- Reworded "Social Circuit" portfolio page summary to be more professional and clear.
+Aug/10
+- Updated CV
+- Removed "Contact" page since all I got was spam...
+- Header isn't aligned properly. 'Will fix later.
 
-	- Updated CV
+Aug/30
+- Removed Home icon from all pages
 
-08/10/16:
-	- Updated CV
-	- Removed "Contact" page since all I got was spam...
-	- Header isn't aligned properly. 'Will fix later.
+### 2017
 
-08/30/16:
-	- Removed Home icon from all pages
+Oct/26
+- Updated all text on all pages.
+- Changed background
+- Rearranged 'About' section
+- Removed 'Github' from skills and replaced it with 'Visual Studi .NET'.
 
-//----------------------------------------------------------------------------
-2017
+### 2018
 
-10/26/17:
-	- Updated all text on all pages.
-	- Changed background
-	- Rearranged 'About' section
-	- Removed 'Github' from skills and replaced it with 'Visual Studi .NET'.
+Dec/08
+- Updated CV		
 
-//----------------------------------------------------------------------------
-2018
+### 2019
 
-12/08/18:
-	- Updated CV
+Sep/29
+- Removed Adwa's website from list of projects
 
-//----------------------------------------------------------------------------
-2019
+### 2020
 
-09/29/19:
-	- Removed Adwa's website from list of projects
+Feb/04
+- Updated "About me" section.
+- Reorganized folder hierarchy.
+- Converted all photos to JPEG.
 
-//----------------------------------------------------------------------------
-2020
+Feb/27
+- Refactor markup and stylesheets. No longer using Bootstrap. Only pure CSS3 and FontAwesome.
+- Updated stylesheets to work for small mobile phone devices.
+- Added HTTPS functionality to website. Let's Encrypt CA.
 
-02/03/2020:
-	- Updated "About me" section.
-	- Reorganized folder hierarchy.
-	- Converted all photos to JPEG.
-
-02/27/2020:
-	- Refactor markup and stylesheets. No longer using Bootstrap. Only pure CSS3 and FontAwesome.
-	- Updated stylesheets to work for small mobile phone devices.
-	- Added HTTPS functionality to website. Let's Encrypt CA.
-
-
-//----------------------------------------------------------------------------
-2022
+### 2022
 	
-2022-10-25:
-	- Updated page styles
-	- Add PharmaSee project
-	- Partially added NKeeper project
+Oct10
+- Updated page styles
+- Add PharmaSee project
+- Partially added NKeeper project
 
+### 2023
 
-//----------------------------------------------------------------------------
-2023
+Apr/29
+- Updated CV
+- Removed Facebook link
 
-2023-04-29:
-	- Updated CV
-	- Removed Facebook link
-
-2023-08-01
-	- Migrating to AWS
+Aug/01
+- Migrating to AWS
+- Reorganizing folders
+- Fixed readme to use Markdown properly
