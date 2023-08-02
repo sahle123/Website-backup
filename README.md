@@ -69,5 +69,6 @@ Apr/29
 
 Aug/01
 - Migrating to AWS
+- Fixed some security vulnerabilities
 - Reorganizing folders
 - Fixed readme to use Markdown properly
