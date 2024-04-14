@@ -56,7 +56,7 @@ Feb/27
 
 ### 2022
 	
-Oct10
+Oct/10
 - Updated page styles
 - Add PharmaSee project
 - Partially added NKeeper project
@@ -72,3 +72,8 @@ Aug/01
 - Fixed some security vulnerabilities
 - Reorganizing folders
 - Fixed readme to use Markdown properly
+
+### 2024
+
+Apr/14
+- Updated CV
