@@ -72,3 +72,7 @@ in "technologies used" section. Changed 'Maximo' --> 'Mixamo'
 ### 2025
 #### May/24
 - Updated CV
+
+### 2026
+#### May/30
+- Updated CV
