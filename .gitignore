@@ -130,4 +130,5 @@ dist
 .pnp.*
 
 # Mac meta data
+.DS_Store
 .ds_store
