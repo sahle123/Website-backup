@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import { site, aboutBio, aboutFacts } from '../data/site';
 import Icon from './Icon.astro';
-import portrait from '../assets/portrait.jpg';
+import portrait from '../assets/esade-2026.webp';
 ---
 <section class="section about" id="about">
   <div class="container about__grid">
@@ -10,7 +10,7 @@ import portrait from '../assets/portrait.jpg';
       <div class="about__frame">
         <Image
           src={portrait}
-          alt={`${site.name} at a Spartan Race`}
+          alt={`Portrait of ${site.name}`}
           widths={[400, 700]}
           sizes="(min-width: 900px) 40vw, 90vw"
           class="about__img"
