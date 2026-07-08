@@ -1,0 +1,73 @@
+---
+import { skills } from '../data/site';
+import Icon from './Icon.astro';
+---
+<section class="section" id="skills">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">What I do</span>
+      <h2>A generalist’s toolkit,<br /><span class="gradient-text">sharpened on the web.</span></h2>
+      <p>I move across the stack — shipping web apps, wrangling data, probing security, and building games.</p>
+    </div>
+
+    <ul class="skills-grid">
+      {skills.map((s, i) => (
+        <li class={`skill glass ${s.span === 'wide' ? 'skill--wide' : ''}`} data-reveal data-delay={(i % 4) + 1}>
+          <span class="skill__icon"><Icon name={s.icon} size={26} /></span>
+          <h3>{s.title}</h3>
+          <p>{s.blurb}</p>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .skills-grid {
+    display: grid;
+    gap: var(--space-2);
+    grid-template-columns: 1fr;
+  }
+  .skill {
+    padding: var(--space-3);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s var(--ease), border-color 0.3s var(--ease), background-color 0.3s var(--ease);
+  }
+  .skill::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(400px 160px at 80% -20%, rgba(52, 226, 208, 0.10), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.35s var(--ease);
+    pointer-events: none;
+  }
+  .skill:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+  .skill:hover::after { opacity: 1; }
+
+  .skill__icon {
+    display: grid;
+    place-items: center;
+    width: 3rem; height: 3rem;
+    border-radius: 12px;
+    color: var(--accent);
+    background: rgba(52, 226, 208, 0.08);
+    border: 1px solid var(--border);
+    margin-bottom: var(--space-1);
+  }
+  .skill h3 { font-size: 1.2rem; }
+  .skill p { color: var(--text-muted); font-size: 0.95rem; }
+
+  @media (min-width: 640px) {
+    .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    .skill--wide { grid-column: span 2; }
+  }
+  @media (min-width: 960px) {
+    .skills-grid { grid-template-columns: repeat(3, 1fr); }
+    .skill--wide { grid-column: span 2; }
+  }
+</style>

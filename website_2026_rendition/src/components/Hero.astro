@@ -1,0 +1,138 @@
+---
+import { site } from '../data/site';
+import Icon from './Icon.astro';
+---
+<section class="hero" id="home">
+  <!-- Decorative corners: tech (brackets, grid) + games (crosshair, pixels) -->
+  <div class="hero__deco" aria-hidden="true">
+    <!-- top-left: code bracket + grid dots -->
+    <svg class="deco deco--tl" width="180" height="180" viewBox="0 0 180 180" fill="none">
+      <path d="M60 20 L20 20 L20 60" stroke="var(--accent)" stroke-width="2" />
+      <path d="M20 90 L20 160 L60 160" stroke="var(--accent-2)" stroke-width="2" opacity="0.7" />
+      <g fill="var(--accent)" opacity="0.55">
+        <circle cx="44" cy="44" r="2" /><circle cx="64" cy="44" r="2" /><circle cx="84" cy="44" r="2" />
+        <circle cx="44" cy="64" r="2" /><circle cx="64" cy="64" r="2" />
+        <circle cx="44" cy="84" r="2" />
+      </g>
+    </svg>
+    <!-- top-right: crosshair (gaming) -->
+    <svg class="deco deco--tr" width="150" height="150" viewBox="0 0 150 150" fill="none">
+      <circle cx="100" cy="50" r="34" stroke="var(--accent-3)" stroke-width="1.5" opacity="0.65" />
+      <line x1="100" y1="6" x2="100" y2="30" stroke="var(--accent-3)" stroke-width="1.5" />
+      <line x1="100" y1="70" x2="100" y2="94" stroke="var(--accent-3)" stroke-width="1.5" />
+      <line x1="56" y1="50" x2="80" y2="50" stroke="var(--accent-3)" stroke-width="1.5" />
+      <line x1="120" y1="50" x2="144" y2="50" stroke="var(--accent-3)" stroke-width="1.5" />
+      <circle cx="100" cy="50" r="3" fill="var(--accent-3)" />
+    </svg>
+    <!-- bottom-right: pixel cluster (8-bit) -->
+    <svg class="deco deco--br" width="140" height="140" viewBox="0 0 140 140" fill="none">
+      <g fill="var(--accent)">
+        <rect x="96" y="96" width="12" height="12" opacity="0.9" />
+        <rect x="112" y="96" width="12" height="12" opacity="0.5" />
+        <rect x="96" y="112" width="12" height="12" opacity="0.5" />
+        <rect x="80" y="112" width="12" height="12" opacity="0.3" />
+        <rect x="112" y="112" width="12" height="12" opacity="0.9" />
+      </g>
+      <path d="M120 40 L120 80 L80 80" stroke="var(--accent-2)" stroke-width="2" opacity="0.6" />
+    </svg>
+  </div>
+
+  <div class="container hero__inner">
+    <p class="eyebrow" data-reveal>Portfolio · {site.location}</p>
+
+    <h1 class="hero__title" data-reveal data-delay="1">
+      Hi, I’m <span class="gradient-text">Sahle&nbsp;“Sal”</span><br />
+      Alturaigi.
+    </h1>
+
+    <p class="hero__lede" data-reveal data-delay="2">{site.hero}</p>
+
+    <div class="hero__actions" data-reveal data-delay="3">
+      <a class="btn btn--primary" href="#work" data-magnetic>
+        View my work <Icon name="arrow" size={18} />
+      </a>
+      <a class="btn btn--ghost" href={site.cv} target="_blank" rel="noopener" data-magnetic>
+        <Icon name="download" size={18} /> Download résumé
+      </a>
+    </div>
+
+    <div class="hero__meta" data-reveal data-delay="4">
+      <span class="hero__chip"><i></i> Available for interesting problems</span>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: min(90vh, 780px);
+    display: flex;
+    align-items: center;
+    padding-block: var(--space-7);
+    overflow: hidden;
+  }
+  .hero__inner { position: relative; z-index: 2; max-width: 60rem; }
+
+  .hero__title {
+    font-size: clamp(2.6rem, 9vw, 5.5rem);
+    margin-block: var(--space-2) var(--space-3);
+    letter-spacing: -0.03em;
+  }
+  .hero__lede {
+    font-size: clamp(1.05rem, 2.4vw, 1.4rem);
+    color: var(--text-muted);
+    max-width: 42rem;
+    line-height: 1.55;
+  }
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-top: var(--space-4);
+  }
+  .hero__meta { margin-top: var(--space-4); }
+  .hero__chip {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-1);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    color: var(--text-muted);
+    padding: 0.4rem 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--surface-glass);
+    backdrop-filter: blur(var(--blur));
+    -webkit-backdrop-filter: blur(var(--blur));
+  }
+  .hero__chip i {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 var(--glow);
+    animation: pulse 2.4s var(--ease) infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(52, 226, 208, 0.5); }
+    70% { box-shadow: 0 0 0 8px rgba(52, 226, 208, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(52, 226, 208, 0); }
+  }
+
+  /* ---- Decorative corners ---- */
+  .hero__deco { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+  .deco { position: absolute; opacity: 0.9; }
+  .deco--tl { top: calc(-1 * var(--space-2)); left: -1.5rem; }
+  .deco--tr { top: var(--space-3); right: -1rem; }
+  .deco--br { bottom: var(--space-3); right: var(--space-3); }
+  .deco--tr, .deco--br { display: none; }
+
+  @media (min-width: 720px) {
+    .deco--tr, .deco--br { display: block; }
+    .deco--tl { left: 0; }
+  }
+  @media (min-width: 1080px) {
+    .deco--tr { right: 2rem; }
+    .deco--br { right: 3rem; bottom: 4rem; }
+  }
+</style>

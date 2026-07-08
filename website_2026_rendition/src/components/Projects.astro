@@ -1,0 +1,28 @@
+---
+import { projects } from '../data/projects';
+import ProjectCard from './ProjectCard.astro';
+---
+<section class="section" id="work">
+  <div class="container">
+    <div class="section-head" data-reveal>
+      <span class="eyebrow">Selected work</span>
+      <h2>Projects I’ve <span class="gradient-text">shipped &amp; tinkered with.</span></h2>
+      <p>Games, graphics, and research — a few things I’ve built over the years. Click any card for the full story.</p>
+    </div>
+
+    <div class="work-grid">
+      {projects.map((project, i) => <ProjectCard project={project} index={i} />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .work-grid {
+    display: grid;
+    gap: var(--space-3);
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 640px) {
+    .work-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>

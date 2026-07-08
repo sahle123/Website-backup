@@ -1,0 +1,96 @@
+---
+import { Image } from 'astro:assets';
+import { site, aboutBio, aboutFacts } from '../data/site';
+import Icon from './Icon.astro';
+import portrait from '../assets/portrait.jpg';
+---
+<section class="section about" id="about">
+  <div class="container about__grid">
+    <div class="about__media" data-reveal>
+      <div class="about__frame">
+        <Image
+          src={portrait}
+          alt={`${site.name} at a Spartan Race`}
+          widths={[400, 700]}
+          sizes="(min-width: 900px) 40vw, 90vw"
+          class="about__img"
+        />
+        <span class="about__tag">📍 {site.location}</span>
+      </div>
+    </div>
+
+    <div class="about__content" data-reveal data-delay="1">
+      <span class="eyebrow">About me</span>
+      <h2>Who am I?</h2>
+      <p class="about__bio">{aboutBio}</p>
+
+      <h3 class="about__facts-title">A few fun facts</h3>
+      <ul class="about__facts">
+        {aboutFacts.map((f) => (
+          <li><span class="about__bullet" aria-hidden="true">▹</span>{f}</li>
+        ))}
+      </ul>
+
+      <a class="btn btn--primary about__cta" href={site.cv} target="_blank" rel="noopener" data-magnetic>
+        <Icon name="download" size={18} /> Download my résumé
+      </a>
+      <p class="about__thanks">Thanks for taking the time to look around. <span aria-hidden="true">😊</span></p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about__grid {
+    display: grid;
+    gap: var(--space-5);
+    grid-template-columns: 1fr;
+    align-items: start;
+  }
+
+  .about__frame {
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border);
+  }
+  .about__frame::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(180deg, transparent 55%, rgba(6, 10, 16, 0.55));
+    pointer-events: none;
+  }
+  .about__img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+  .about__tag {
+    position: absolute;
+    z-index: 2;
+    bottom: var(--space-2); left: var(--space-2);
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 999px;
+    background: rgba(10, 14, 20, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--border-strong);
+  }
+
+  .about__content h2 { font-size: clamp(1.9rem, 4.5vw, 2.8rem); margin-block: var(--space-2) var(--space-3); }
+  .about__bio { color: var(--text-muted); font-size: 1.08rem; }
+  .about__facts-title { font-size: 1.15rem; margin-block: var(--space-4) var(--space-2); }
+  .about__facts { display: flex; flex-direction: column; gap: var(--space-2); }
+  .about__facts li {
+    display: flex;
+    gap: var(--space-2);
+    color: var(--text-muted);
+    line-height: 1.5;
+  }
+  .about__bullet { color: var(--accent); flex-shrink: 0; }
+  .about__cta { margin-top: var(--space-4); }
+  .about__thanks { margin-top: var(--space-3); color: var(--text-faint); font-size: 0.95rem; }
+
+  @media (min-width: 900px) {
+    .about__grid { grid-template-columns: 0.85fr 1.15fr; gap: var(--space-6); }
+    .about__media { position: sticky; top: calc(var(--header-h) + var(--space-3)); }
+  }
+</style>

@@ -1,0 +1,108 @@
+---
+import { site } from '../data/site';
+import Icon from './Icon.astro';
+
+interface Props { base?: string; }
+const { base = '' } = Astro.props;
+
+// Build-time "last updated" stamp — refreshes automatically on every deploy.
+const updated = new Date().toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+
+const socials = [
+  { name: 'github', label: 'GitHub', url: site.socials.github },
+  { name: 'stackoverflow', label: 'Stack Overflow', url: site.socials.stackoverflow },
+  { name: 'linkedin', label: 'LinkedIn', url: site.socials.linkedin },
+];
+const links = [
+  { label: 'Skills', href: `${base}#skills` },
+  { label: 'Work', href: `${base}#work` },
+  { label: 'About', href: `${base}#about` },
+];
+---
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <a class="footer__logo" href={base || '/'}>Sahle<span>.</span></a>
+      <p>{site.role} · {site.location}</p>
+    </div>
+
+    <nav class="footer__nav" aria-label="Footer">
+      <ul>
+        {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <ul class="footer__socials">
+      {socials.map((s) => (
+        <li>
+          <a href={s.url} target="_blank" rel="noopener" aria-label={s.label} data-magnetic>
+            <Icon name={s.name} size={20} />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div class="container footer__base">
+    <span>© {new Date().getFullYear()} {site.name}</span>
+    <span class="footer__updated">Last updated {updated}</span>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: #060a10;
+    border-top: 1px solid var(--border);
+    padding-block: var(--space-6) var(--space-3);
+    margin-top: var(--space-8);
+  }
+  .footer__inner {
+    display: grid;
+    gap: var(--space-4);
+    align-items: center;
+    grid-template-columns: 1fr;
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid var(--border);
+  }
+  .footer__logo { font-size: 1.4rem; font-weight: 700; }
+  .footer__logo span { color: var(--accent); }
+  .footer__brand p { color: var(--text-faint); font-size: 0.9rem; margin-top: var(--space-1); }
+
+  .footer__nav ul { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+  .footer__nav a { color: var(--text-muted); font-size: 0.95rem; transition: color 0.2s var(--ease); }
+  .footer__nav a:hover { color: var(--accent); }
+
+  .footer__socials { display: flex; gap: var(--space-2); }
+  .footer__socials a {
+    display: grid;
+    place-items: center;
+    width: 2.75rem; height: 2.75rem;
+    border-radius: 999px;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    transition: transform 0.25s var(--ease), color 0.25s var(--ease),
+      border-color 0.25s var(--ease), background-color 0.25s var(--ease);
+  }
+  .footer__socials a:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+    background: rgba(52, 226, 208, 0.06);
+    transform: translateY(-3px);
+  }
+
+  .footer__base {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    justify-content: space-between;
+    padding-top: var(--space-3);
+    color: var(--text-faint);
+    font-size: 0.85rem;
+  }
+  .footer__updated { font-family: var(--font-mono); }
+
+  @media (min-width: 760px) {
+    .footer__inner { grid-template-columns: 1.4fr 1fr auto; }
+    .footer__nav { justify-self: center; }
+  }
+</style>

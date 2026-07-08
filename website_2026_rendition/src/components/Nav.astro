@@ -1,0 +1,107 @@
+---
+import { site } from '../data/site';
+import Icon from './Icon.astro';
+
+interface Props {
+  /** links that scroll within the home page vs. absolute links from a sub-page */
+  base?: string;
+}
+const { base = '' } = Astro.props;
+const links = [
+  { label: 'Skills', href: `${base}#skills` },
+  { label: 'Work', href: `${base}#work` },
+  { label: 'About', href: `${base}#about` },
+];
+---
+<header class="nav" id="site-nav">
+  <div class="container nav__inner">
+    <a class="nav__logo" href={`${base || '/'}`} aria-label="Home — Sahle Alturaigi">
+      <span class="nav__mark" aria-hidden="true">SA</span>
+      <span class="nav__name">Sahle<span class="nav__dot">.</span></span>
+    </a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <ul>
+        {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+      </ul>
+    </nav>
+
+    <a class="btn btn--primary nav__cta" href={site.cv} target="_blank" rel="noopener" data-magnetic>
+      <Icon name="download" size={18} />
+      <span>Résumé</span>
+    </a>
+  </div>
+</header>
+
+<style>
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid transparent;
+    transition: background-color 0.3s var(--ease), border-color 0.3s var(--ease),
+      backdrop-filter 0.3s var(--ease);
+  }
+  .nav.is-stuck {
+    background: rgba(10, 14, 20, 0.72);
+    backdrop-filter: blur(var(--blur)) saturate(140%);
+    -webkit-backdrop-filter: blur(var(--blur)) saturate(140%);
+    border-bottom-color: var(--border);
+  }
+  .nav__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    width: 100%;
+  }
+  .nav__logo { display: inline-flex; align-items: center; gap: var(--space-1); font-weight: 700; }
+  .nav__mark {
+    display: grid;
+    place-items: center;
+    width: 2.1rem; height: 2.1rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    color: var(--accent-ink);
+    background: var(--gradient);
+    border-radius: 9px;
+    box-shadow: 0 4px 16px -6px var(--glow);
+  }
+  .nav__name { font-size: 1.05rem; letter-spacing: -0.01em; }
+  .nav__dot { color: var(--accent); }
+
+  .nav__links { display: none; }
+  .nav__links ul { display: flex; gap: var(--space-4); }
+  .nav__links a {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    position: relative;
+    padding-block: 0.25rem;
+    transition: color 0.2s var(--ease);
+  }
+  .nav__links a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -2px;
+    width: 100%; height: 1.5px;
+    background: var(--accent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.28s var(--ease);
+  }
+  .nav__links a:hover { color: var(--text); }
+  .nav__links a:hover::after { transform: scaleX(1); }
+
+  .nav__cta span { display: none; }
+
+  @media (min-width: 640px) {
+    .nav__cta span { display: inline; }
+  }
+  @media (min-width: 860px) {
+    .nav__links { display: block; }
+  }
+</style>
