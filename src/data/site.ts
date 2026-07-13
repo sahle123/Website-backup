@@ -72,4 +72,4 @@ export const aboutFacts: string[] = [
 ];
 
 export const aboutBio =
-  "I'm a jack-of-all-trades bloke whose talents lean hardest toward the web and cloud. I currently live and work in Riyadh, Saudi Arabia, moving comfortably between building web apps, building stories from data, poking at security, and making games.";
+  "I'm a jack-of-all-trades bloke whose talents lean hardest toward the web and cloud. I currently live and work in Riyadh, Saudi Arabia, moving comfortably between making web apps, building stories from data, poking at security, and making games.";
